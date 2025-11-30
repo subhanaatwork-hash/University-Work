@@ -1,0 +1,11 @@
+{
+    "java.debug.settings.onBuildFailureProceed": true,
+    "java.project.sourcePaths": [
+        "Semester-1/PF/Repition Control",
+        "Semester-1/PF/Methods",
+        "Semester-1/PF/Fundamentals of Java",
+        "Semester-1/PF/Decision Structure",
+        "Semester-1/PF/Arrays",
+        ".vscode"
+    ]
+}
