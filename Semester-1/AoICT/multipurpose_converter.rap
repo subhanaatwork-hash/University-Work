@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowchart name="MultipurposeConverter" type="ExecutableFlowchart">
+  <procedures>
+    <procedure name="Main">
+      <start x="50" y="50"/>
+      <call x="50" y="120" proc="Menu"/>
+      <input x="50" y="200">option</input>
+      <selection x="50" y="280">
+        <condition>option = 1</condition>
+        <true>
+          <call proc="Temperature"/>
+        </true>
+        <false>
+          <selection>
+            <condition>option = 2</condition>
+            <true><call proc="Length"/></true>
+            <false>
+              <selection>
+                <condition>option = 3</condition>
+                <true><call proc="Weight"/></true>
+                <false>
+                  <selection>
+                    <condition>option = 4</condition>
+                    <true><call proc="Speed"/></true>
+                    <false>
+                      <selection>
+                        <condition>option = 5</condition>
+                        <true><output>"Goodbye!"</output></true>
+                        <false><output>"Invalid choice!"</output></false>
+                      </selection>
+                    </false>
+                  </selection>
+                </false>
+              </selection>
+            </false>
+          </selection>
+        </false>
+      </selection>
+      <call x="50" y="500" proc="Main"/>
+    </procedure>
+
+    <procedure name="Menu">
+      <output>====== MULTIPURPOSE CONVERTER ======</output>
+      <output>1. Temperature Converter</output>
+      <output>2. Length Converter</output>
+      <output>3. Weight Converter</output>
+      <output>4. Speed Converter</output>
+      <output>5. Exit</output>
+      <output>====================================</output>
+    </procedure>
+
+    <procedure name="Temperature">
+      <output>Temperature Conversion</output>
+      <input>choice</input>
+      <input>temp</input>
+      <output>Conversion done.</output>
+    </procedure>
+
+    <procedure name="Length">
+      <output>Length Conversion</output>
+      <input>choice</input>
+      <input>value</input>
+      <output>Conversion done.</output>
+    </procedure>
+
+    <procedure name="Weight">
+      <output>Weight Conversion</output>
+      <input>choice</input>
+      <input>value</input>
+      <output>Conversion done.</output>
+    </procedure>
+
+    <procedure name="Speed">
+      <output>Speed Conversion</output>
+      <input>choice</input>
+      <input>value</input>
+      <output>Conversion done.</output>
+    </procedure>
+
+  </procedures>
+</flowchart>
